@@ -27,4 +27,4 @@ Når du har gjort dette kan du køre hhv. server og klient på følgende måde:
 2. Klik på `Run'Client.main()'`
 
 #### 3. Opgave - kommuniker med hinanden
-Find sammen med en kammerat og lad jeres systemer snakke med hinanden. Dette kræver at I ændrer klienten's socket til at lytte på serverens (din vens computer)'s IP adresse.
+Find sammen med en kammerat og lad jeres systemer snakke med hinanden. Dette kræver at I ændrer klienten's socket til at lytte på serverens (din vens computer)'s IP adresse fremfor "localhost"
