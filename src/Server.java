@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -24,17 +21,31 @@ public class Server {
                 BufferedReader inFromClient =
                         new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
 
-                DataOutputStream outToClient =
-                        new DataOutputStream(connectionSocket.getOutputStream());
+                //Print request headers from client
+                String str = ".";
+                while (!str.equals("")) {
+                    str = inFromClient.readLine();
+                    System.out.println(str);
+                }
 
-                String clientSentence = inFromClient.readLine();
-                System.out.println("Received: " + clientSentence);
+                //Create output stream (to client)
+                PrintWriter outToClient = new PrintWriter(connectionSocket.getOutputStream());
 
-                //Capitalize string received from server and return to client as response
-                //String serverResponse = ....
+                //Write response headers
+                outToClient.println("HTTP/1.0 200 OK");
+                outToClient.println("Content-Type: text/plain");
+                outToClient.println("Server: Cowboy");
+                outToClient.println("");
 
-                outToClient.writeBytes(serverResponse);
+                //Content
+                outToClient.println("Hello World!");
 
+                //Flush and Close
+                outToClient.flush();
+                outToClient.close();
+
+                //Close socket response
+                connectionSocket.close();
             }
 
         } catch (IOException e) {
