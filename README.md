@@ -28,3 +28,5 @@ Når du har gjort dette kan du køre hhv. server og klient på følgende måde:
 
 #### 3. Opgave - kommuniker med hinanden
 Find sammen med en kammerat og lad jeres systemer snakke med hinanden. Dette kræver at I ændrer klienten's socket til at lytte på serverens (din vens computer)'s IP adresse.
+
+For at finde de sidste opgaver, skal du skifte branch. Åbn din terminal eller git bash og skriv `git checkout http` og følg nu step 4.
