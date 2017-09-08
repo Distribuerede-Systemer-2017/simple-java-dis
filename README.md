@@ -28,3 +28,16 @@ Når du har gjort dette kan du køre hhv. server og klient på følgende måde:
 
 #### 3. Opgave - kommuniker med hinanden
 Find sammen med en kammerat og lad jeres systemer snakke med hinanden. Dette kræver at I ændrer klienten's socket til at lytte på serverens (din vens computer)'s IP adresse.
+
+#### 4. Opgave - kør en web server
+Sidste opgave er udforske en opgraderet version af vores DIS - nemlig en webserver. Den kommunikere over HTTP og kan derfor snakke med din browser.
+Prøv derfor at åbne din browser og gå til "localhost:31337" og se hvad serveren returnerer.
+
+1. Åbn din browsers udviklerværktøjer (f.eks. CMD+ALT+I i Chrome på Mac) og opdater siden
+2. Vælg fanen Network og se de requests der er blevet lavet - hvilken Content-Type er der returneret? Hvad hedder serveren?
+
+Prøv følgende:
+1. Få serveren til at returnere 404 (BONUS - hvad står status kode 418 for?)
+2. Få serveren til at returnere HTML (husk content-type)
+3. Ændre navnet på serveren
+4. Tilføj en ny Response Header
