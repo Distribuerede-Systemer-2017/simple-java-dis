@@ -14,7 +14,7 @@ Hent dette repository og åbn i IntelliJ
 #### 2. Opgave - kør server og klient
 Hvis IntelliJ brokker sig over en fejl i Server klassen, så har den fat i noget. På linje 36 bliver der refereret til en variable som ikke eksisterer.
 
-Din opgave er at lave `stringResponse` med den besked som kommer fra klientet og gør alle bogstaver store, for til sidst at sende beskeden retur til klienten.
+Din opgave er at lave `stringResponse` med den besked som kommer fra klientet og gør alle bogstaver store, for til sidst at sende beskeden retur til klienten. OBS: husk et "\n" i enden at jeres besked!
 
 Når du har gjort dette kan du køre hhv. server og klient på følgende måde:
 
